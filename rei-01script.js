@@ -4,16 +4,22 @@ let isGameStarted = false;
 let currentStationIndex = 0;
 
 const stations = [
-  { name: "スタート", event: "" },
-  { name: "駅2", event: "コンビニで買い物。500円失う。" },
-  { name: "駅3", event: "公園で癒される。イベントなし。" },
-  { name: "駅4", event: "バイト代GET！1000円もらう。" },
-  { name: "駅5", event: "電車賃を払う。400円失う。" },
-  { name: "駅6", event: "先輩にご飯おごってもらった！800円もらう。" },
-  { name: "駅7", event: "うっかりスマホを落とす。1500円失う。" },
-  { name: "駅8", event: "お年玉GET！2000円もらう。" },
-  { name: "駅9", event: "カフェでのんびり。700円失う。" },
-  { name: "ゴール", event: "" }
+  { name: "札幌", event: "スタート" },
+  { name: "新札幌", event: "ビギナーズラック！1000円もらう" },
+  { name: "南千歳", event: "飛行機がみたい！新千歳空港へ飛行機を見に行く" },
+  { name: "苫小牧", event: "港の街！自費でご飯を食べる" },
+  { name: "白老", event: "1度だけイベントを無視できるカードを手に入れる" },
+  { name: "登別", event: "温泉に入る！" },
+  { name: "東室蘭", event: "気が変わった。室蘭まで行く" },
+  { name: "伊達紋別", event: "お小遣いを3000円もらう" },
+  { name: "洞爺", event: "洞爺湖を見に行く" },
+  { name: "長万部", event: "3000円失う" },
+  { name: "八雲", event: "2000円失う" },
+  { name: "森", event: "ご当地者が食べたい！自費で食べる" },
+  { name: "大沼公園", event: "2000円もらう" },
+  { name: "新函館北斗", event: "新幹線に見惚れていた。列車を１本逃す" },
+  { name: "五稜郭", event: "五稜郭タワーにのぼり一句読む" },
+  { name: "函館", event: "ゴール" }
 ];
 
 const board = document.getElementById("board");
@@ -59,7 +65,7 @@ rollDiceButton.addEventListener("click", () => {
     diceResultDiv.textContent = `サイコロの結果: ${diceResult}`;
 
 
-    
+
     currentStationIndex += diceResult;
 
     // ゴールを超えたら強制的にゴールに止める
