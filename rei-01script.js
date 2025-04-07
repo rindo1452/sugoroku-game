@@ -4,7 +4,7 @@ let isGameStarted = false;
 let currentStationIndex = 0;
 
 const stations = [
-  { name: "札幌", event: "スタート" },
+  { name: "札幌", event: "🏁スタート" },
   { name: "新札幌", event: "ビギナーズラック！1000円もらう" },
   { name: "南千歳", event: "飛行機がみたい！新千歳空港へ飛行機を見に行く" },
   { name: "苫小牧", event: "港の街！自費でご飯を食べる" },
@@ -19,7 +19,7 @@ const stations = [
   { name: "大沼公園", event: "2000円もらう" },
   { name: "新函館北斗", event: "新幹線に見惚れていた。列車を１本逃す" },
   { name: "五稜郭", event: "五稜郭タワーにのぼり一句読む" },
-  { name: "函館", event: "ゴール" }
+  { name: "函館", event: "🎉ゴール" }
 ];
 
 const board = document.getElementById("board");
@@ -93,13 +93,13 @@ function generateBoard() {
     let nameText = station.name;
     let eventText = station.event;
 
-    if (index === 0) {
+    /*if (index === 0) {
       nameText = "🏁 スタート";
       eventText = "";
     } else if (index === stations.length - 1) {
       nameText = "🎉 ゴール";
       eventText = "";
-    }
+    }*/
 
     stationDiv.innerHTML = `
       <div class="station-name">${nameText}</div>
