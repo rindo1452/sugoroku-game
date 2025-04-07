@@ -1,0 +1,156 @@
+/* ゲーム画面のスタイル */
+#game-screen {
+    display: none; /* ゲーム画面は初期状態で非表示 */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  #start-screen {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* サイコロの結果表示 */
+  #dice-result {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* 所持金表示 */
+  #money {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  /* 駅ボードのスタイル（縦表示に変更） */
+  #board {
+    display: flex;
+    flex-direction: column; /* 縦並びに変更 */
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center; /* 中央に配置 */
+  }
+
+  /*　イベント表示　*/
+  #event-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff7cc;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .station {
+    position: relative;
+    width: 220px;
+    height: 100px;
+    margin: 10px 0;
+    text-align: left;
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .station .event {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  .station.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #388E3C;
+  }
+  
+  .station:hover {
+    background-color: #e7e7e7;
+  }
+  
+  /* ゲームのリセット確認モーダル */
+  #reset-confirmation {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #reset-confirmation button {
+    margin: 5px;
+    font-size: 16px;
+  }
+  
+  #reset-confirmation .confirm-button {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+  }
+  
+  #reset-confirmation .cancel-button {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  /* サイコロアニメーション */
+  .dice-roll {
+    font-size: 30px;
+    animation: roll 1s infinite;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
